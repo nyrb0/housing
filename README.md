@@ -1,5 +1,12 @@
 Проект реализован на **React + TypeScript + Zustand + React Query**,
 
+### `Почему то не работает роуты и выдают ошибку
+
+-   GET /me/favorites
+-   POST /me/favorites/:listingId/toggle → { isFavorite: boolean }
+-   GET /me
+    `
+
 ## Функционал
 
 ### Аутентификация
