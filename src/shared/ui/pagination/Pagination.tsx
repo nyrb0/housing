@@ -20,7 +20,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages,
                 ← Назад
             </Button>
 
-            <span className='whitespace-nowrap'>
+            <span className='whitespace-nowrap text-gray-600 dark:text-white'>
                 Страница {currentPage} из {totalPages}
             </span>
 

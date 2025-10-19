@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
     line-height: 1;
@@ -6,8 +7,8 @@ body {
     color: var(--gray);
     font-weight: 600;
     font-family: var(--font-family);
-    background-color: #242424;
 }
+
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;

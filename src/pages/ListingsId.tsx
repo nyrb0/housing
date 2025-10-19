@@ -31,10 +31,10 @@ const ListingsId = () => {
     return (
         <div className='mt-10 ml-5 mr-5 mb-5'>
             <div className='container mx-auto'>
-                <div className='bg-[#2b2b2b] rounded-xl shadow-lg overflow-hidden'>
+                <div className='bg-gray-100 dark:bg-[#2b2b2b] rounded-xl shadow-lg overflow-hidden'>
                     <div className='p-2'>
                         <Link to={'/'} className='flex items-center gap-3'>
-                            <IoMdArrowRoundBack fill='white' size={40} /> <span className='text-white text-xl'>На главную</span>
+                            <IoMdArrowRoundBack fill='white' size={40} /> <span className='text-gray-700 dark:text-white text-xl'>На главную</span>
                         </Link>
                     </div>
 
@@ -42,7 +42,7 @@ const ListingsId = () => {
                         <Swiper navigation={true} modules={[Navigation]} className='w-full 2xl:h-[700px] xl:h-[600px] lg:h-[500px] sm:h-[400px]'>
                             {data.photos.map((photo, i) => (
                                 <SwiperSlide key={i}>
-                                    <img src={photo} alt={data.title} className='w-full h-full object-cover object-center' />
+                                    <img src={photo} alt={data.title} loading='lazy' className='w-full h-full object-cover object-center' />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
@@ -51,13 +51,13 @@ const ListingsId = () => {
                         </button>
                     </div>
 
-                    <div className='p-6 text-white'>
+                    <div className='p-6 text-gray-700 dark:text-white'>
                         <h1 className='text-2xl font-semibold mb-2'>{data.title}</h1>
                         <p className='text-gray-300 mb-4'>{data.description}</p>
                         <AmenitiesList amenities={data.amenities} />
 
                         <p className='my-3'>Забронировано: {data.bookingsCount}🔒</p>
-                        <div className='flex flex-col sm:flex-row justify-between gap-1.5 text-sm text-gray-400'>
+                        <div className='flex flex-col sm:flex-row justify-between gap-1.5 text-sm text-gray-700 dark:text-gray-400'>
                             <span>🏙️ {data.city}</span>
                             <span>💸 {data.pricePerNight}$/ночь</span>
                             <RatingStars value={data.rating} />

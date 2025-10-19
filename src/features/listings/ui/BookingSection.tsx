@@ -39,7 +39,7 @@ export const BookingSection = ({ listing }: BookingSectionProps) => {
     };
 
     return (
-        <div className='mt-5 flex flex-col gap-2 text-white max-w-max'>
+        <div className='mt-5 flex flex-col gap-2 text-gray-700 dark:text-white max-w-max'>
             <label>
                 Заезд:
                 <input type='date' value={checkIn} onChange={e => setCheckIn(e.target.value)} className='ml-2 p-1 rounded text-black' />

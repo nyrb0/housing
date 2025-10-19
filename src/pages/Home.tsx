@@ -43,7 +43,7 @@ const Home = () => {
             <ListingsFilters isOpen={open} onClose={() => setOpen(false)} />
             <div className='container mx-auto p-6'>
                 <div className='flex justify-between gap-3 items-center mb-3'>
-                    <IoFilter onClick={() => setOpen(true)} size={40} fill='white' />
+                    <IoFilter onClick={() => setOpen(true)} size={40} className='fill-gray-600 dark:fill-white' />
                     <LogOut />
                 </div>
                 {data?.data.length ? (

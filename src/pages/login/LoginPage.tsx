@@ -41,9 +41,9 @@ export const LoginPage = () => {
         <div className='flex justify-center items-center h-screen '>
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className='flex flex-col items-center m-[10px] gap-5 bg-[#343434] rounded-xl p-[10px] max-w-[400px] w-full'
+                className='flex flex-col items-center m-[10px] gap-5  bg-gray-100 shadow-2xl dark:bg-[#343434] rounded-xl p-[10px] max-w-[400px] w-full'
             >
-                <h2 className='text-white text-2xl font-semibold'>Вход</h2>
+                <h2 className='text-gray-700 dark:text-white text-2xl font-semibold'>Вход</h2>
                 <Input
                     error={errors.email?.message}
                     type='email'

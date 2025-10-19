@@ -31,7 +31,8 @@ export const HousingCard = ({ data }: { data: IListings }) => {
             to={`/listings/${data.id}`}
             state={data}
             className='
-        bg-[#2f2f2f] 
+        bg-gray-100
+        dark:bg-[#2f2f2f] 
         rounded-xl 
         overflow-hidden 
         shadow-md 
@@ -57,9 +58,9 @@ export const HousingCard = ({ data }: { data: IListings }) => {
                 ))}
             </div>
 
-            <div className='p-4 flex flex-col gap-2 text-white'>
+            <div className='p-4 flex flex-col gap-2 text-gray-700 dark:text-white'>
                 <h3 className='text-lg font-semibold'>
-                    {data.title}, <span className='text-sm text-gray-300'>{data.city}</span>
+                    {data.title}, <span className='text-sm text-gray-700 dark:text-gray-300'>{data.city}</span>
                 </h3>
 
                 <p className='text-sm'>{data.pricePerNight}$ / ночь</p>

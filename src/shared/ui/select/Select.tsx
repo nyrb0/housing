@@ -37,16 +37,20 @@ export const Select = ({ options, value, onChange, placeholder }: ISelectProps) 
             <button
                 type='button'
                 onClick={() => setOpen(!open)}
-                className='w-full bg-gray-700/30 backdrop-blur-md text-white px-4 py-2 rounded-md flex justify-between items-center focus:outline-none'
+                className='w-full bg-gray-700/30 backdrop-blur-md text-gray-700 dark:text-white px-4 py-2 rounded-md flex justify-between items-center focus:outline-none'
             >
                 {options.find(opt => opt.value === value)?.label || placeholder || 'Select'}
                 <span className={`ml-2 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}>▼</span>
             </button>
 
             {open && (
-                <ul className='absolute z-10 mt-1 w-full bg-gray-700 text-white rounded-md shadow-lg max-h-60  overflow-auto'>
+                <ul className='absolute z-10 mt-1 w-full bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-white rounded-md shadow-lg max-h-60  overflow-auto'>
                     {options.map(opt => (
-                        <li key={opt.value} className='px-4 py-2 cursor-pointer hover:bg-gray-600' onClick={() => handleSelect(opt.value)}>
+                        <li
+                            key={opt.value}
+                            className='px-4 py-2 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600'
+                            onClick={() => handleSelect(opt.value)}
+                        >
                             {opt.label}
                         </li>
                     ))}

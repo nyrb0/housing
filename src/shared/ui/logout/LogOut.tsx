@@ -14,8 +14,8 @@ const LogOut = () => {
                         toast.success('Успешно вышли с аккаунта!');
                     }}
                 >
-                    <span className='text-white'>выйти</span>
-                    <SlLogout size={30} fill='white' />
+                    <span className='text-gray-600 dark:text-white'>выйти</span>
+                    <SlLogout size={30} className='fill-gray-600 dark:fill-white' />
                 </div>
             )}
         </>
