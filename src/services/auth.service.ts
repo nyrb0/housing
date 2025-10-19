@@ -1,6 +1,7 @@
 import { ILoginResponse, IUser } from '@/features/types/auth.types';
 import { useAuthStore } from '@/store/auth.store';
 import axios from 'axios';
+import { axiosServiceAuth } from './http';
 
 const API_URL = 'http://localhost:4000';
 
@@ -18,9 +19,7 @@ export const authService = {
     async getMe(): Promise<IUser> {
         const token = getToken();
         if (!token) throw new Error('Unauthorized');
-        const { data } = await axios.get<IUser>(`${API_URL}/me`, {
-            headers: { Authorization: `Bearer ${token}` },
-        });
+        const { data } = await axiosServiceAuth<IUser>('/me');
         return data;
     },
 };

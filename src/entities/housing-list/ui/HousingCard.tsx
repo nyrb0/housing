@@ -30,7 +30,17 @@ export const HousingCard = ({ data }: { data: IListings }) => {
         <Link
             to={`/listings/${data.id}`}
             state={data}
-            className='bg-[#2f2f2f] rounded-xl overflow-hidden shadow-md'
+            className='
+        bg-[#2f2f2f] 
+        rounded-xl 
+        overflow-hidden 
+        shadow-md 
+        transform 
+        scale-99 
+        transition-transform 
+        duration-700 
+        hover:scale-101
+    '
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >

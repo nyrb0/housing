@@ -24,8 +24,8 @@ export const LoginPage = () => {
         reset,
     } = useForm<LoginForm>({
         defaultValues: {
-            email: 'demo@user.com',
-            password: 'demo123',
+            email: '',
+            password: '',
         },
     });
     const onSubmit: SubmitHandler<LoginForm> = async data => {

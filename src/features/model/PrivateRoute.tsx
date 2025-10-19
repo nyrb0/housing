@@ -5,7 +5,6 @@ import { Navigate, useLocation } from 'react-router-dom';
 const PrivateRoute = ({ children }: { children: JSX.Element }) => {
     const token = useAuthStore(state => state.token);
     const location = useLocation();
-    console.log(token, 'jvn');
 
     if (!token) return <Navigate to={'/login'} state={{ from: location.pathname }} />;
     return children;
