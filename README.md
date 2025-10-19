@@ -7,6 +7,17 @@
 -   GET /me
     `
 
+# Установка и запуск
+
+### Клонировать репозиторий
+
+```bash
+git clone https://github.com/nyrb0/housing.git
+cd housing
+```
+
+---
+
 ## Функционал
 
 ### Аутентификация
@@ -45,12 +56,3 @@
 | **HTTP**           | Axios                   |
 
 ---
-
-## Установка и запуск
-
-### 1. Клонировать репозиторий
-
-```bash
-git clone https://github.com/nyrb0/housing.git
-cd housing
-```
